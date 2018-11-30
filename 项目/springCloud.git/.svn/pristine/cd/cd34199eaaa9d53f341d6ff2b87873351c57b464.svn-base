@@ -1,0 +1,15 @@
+package com.icyroc.dao;
+
+
+import com.icyroc.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository("userDao")
+public interface IUserDao extends JpaRepository<User, Integer> {
+
+    List<User> findAll();
+
+}
